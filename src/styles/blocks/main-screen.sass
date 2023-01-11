@@ -1,0 +1,94 @@
+@import '../../styles/overall/variables'
+@import '../../styles/overall/mixins'
+
+.main-screen
+  background-color: $color-dark
+  background-image: url(../img/ms-bg.webp)
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+
+  &__wrap
+    position: relative
+    padding: 198px 0
+    display: flex
+    justify-content: space-between
+
+  &__offer
+    position: relative
+    z-index: 2
+    max-width: 550px
+
+  &__title
+    margin-bottom: 48px
+    @include titleH2
+    color: $color-white
+
+  &__text
+    margin-bottom: 48px
+    font-size: $fz-medium
+    line-height: $lh-hight
+    color: $color-white
+
+  &__actions
+    display: flex
+    align-items: center
+
+  &__link
+    display: block
+    margin-right: 16px
+    padding: 12px 16px
+    font-family: "Roboto"
+    font-size: $fz-button
+    font-weight: $fw-black
+    line-height: $lh-medium
+    letter-spacing: 1px
+    text-transform: uppercase
+    color: $color-primary
+    background-color: $color-white
+    border-radius: $border-radius-small
+    transition: all .3s ease
+    &:hover
+      color: $color-white
+      background-color: $color-primary
+
+  &__btn
+    padding: 12px
+    background-color: $color-primary
+    border: none
+    border-radius: 50%
+    &:hover
+      .main-screen__btn-image
+        transform: scale(1.2)
+
+  &__btn-image
+    width: 24px
+    height: 24px
+    transition: transform .3s ease
+
+  &__btn-img
+    @include fullImg
+
+  &__planet
+    position: absolute
+    right: 0
+    bottom: -11%
+    z-index: 1
+    width: 47%
+
+  &__planet-img
+    position: relative
+    z-index: 2
+    @include fullImg
+
+  &__planet-bg
+    position: absolute
+    top: -10%
+    left: -10%
+    right: -10%
+    bottom: -10%
+    z-index: 1
+    background-image: url(../img/planet-bg.svg)
+    background-size: 10 0%
+    background-repeat: no-repeat
+    background-position: center

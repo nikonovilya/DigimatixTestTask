@@ -1,0 +1,46 @@
+@import '../../styles/overall/variables'
+@import '../../styles/overall/mixins'
+
+.contact
+  position: relative
+  padding: 72px 0 112px
+
+  &__overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1
+    background-color: rgba(0,0,0,.7)
+
+  &__background
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 2
+    background-color: $color-primary
+    background-image: url(../img/footer-bg.webp)
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+
+  &__content
+    position: relative
+    z-index: 3
+
+  &__title
+    margin-bottom: 32px
+    @include titleH4
+    text-align: center
+    color: $color-white
+
+  &__text
+    margin: 0 auto 48px
+    max-width: 550px
+    font-size: $fz-medium
+    line-height: $lh-hight
+    text-align: center
+    color: $color-white
