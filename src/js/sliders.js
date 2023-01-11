@@ -13,13 +13,19 @@ function createSliders(className) {
       el: '.tabs__content-pagination',
       clickable: true,
     },
-    slidesPerView: 4,
-    spaceBetween: 64,
-    // breakpoints: {
-    //   1101: {
-    //     initialSlide: 1,
-    //   },
-    // },
+    slidesPerView: 1,
+    spaceBetween: 0,
+
+    breakpoints: {
+      560: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+      },
+      991: {
+        slidesPerView: 4,
+        spaceBetween: 64,
+      },
+    },
   });
 }
 

@@ -89,6 +89,31 @@
     bottom: -10%
     z-index: 1
     background-image: url(../img/planet-bg.svg)
-    background-size: 10 0%
+    background-size: 100%
     background-repeat: no-repeat
     background-position: center
+
+@media screen and (max-width: 768px)
+  .main-screen
+    &__wrap
+      padding-top: 140px
+      padding-bottom: 360px
+    &__planet
+      width: 70%
+      bottom: -8%
+
+@media screen and (max-width: 560px)
+  .main-screen
+    &__wrap
+      padding-bottom: 80vw
+
+    &__title
+      text-align: center
+    &__text
+      text-align: center
+    &__actions
+      justify-content: center
+    &__planet
+      width: 90%
+      left: 50%
+      transform: translateX(-50%)
