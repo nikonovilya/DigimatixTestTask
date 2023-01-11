@@ -1,6 +1,6 @@
 import './index.html';
 import './styles/styles.sass';
-import './js/getBrowser';
+import './js/getBrowserVersion';
 import './js/tabs';
 import './js/utils/inputPhoneMask';
 import './js/contact-form';

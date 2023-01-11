@@ -38,10 +38,7 @@
     display: block
 
   &__content-slider
-    display: grid
-    grid-auto-columns: calc(25% - 64px)
-    grid-column-gap: 64px
-    grid-auto-flow: column
+    display: flex
     width: calc(100% + 64px)
 
   &__content-pagination
@@ -82,8 +79,6 @@
   .tabs
     &__content-slider
       width: calc(100% + 32px)
-      grid-auto-columns: calc(50% - 32px)
-      grid-column-gap: 32px
 
 @media screen and (max-width: 560px)
   .tabs
@@ -92,8 +87,6 @@
 
     &__content-slider
       width: 100%
-      grid-auto-columns: 100%
-      grid-column-gap: 0
 
     &__content-nav
       display: none
