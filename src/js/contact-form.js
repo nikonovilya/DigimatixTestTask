@@ -25,7 +25,6 @@ function formValidation(form) {
     removeError(inputBlock);
 
     if (input.hasAttribute('data-email-input')) {
-      console.log('true');
       const regExp =
         // eslint-disable-next-line no-useless-escape
         /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -61,8 +60,17 @@ function checkValidationFormOnSubmit() {
     event.preventDefault();
 
     if (formValidation(form)) {
-      const myFormData = new FormData(event.target);
-      console.log(myFormData);
+      const name = form.querySelector('input[data-name-input]');
+      const tel = form.querySelector('input[data-tel-input]');
+      const email = form.querySelector('input[data-email-input]');
+      const formData = {
+        name: name.value,
+        phone: tel.value,
+        email: email.value,
+      };
+
+      console.log('formData: ', JSON.stringify(formData, null, 2));
+      alert('Данные формы валидна! (вывел в консоль)');
     }
   };
 

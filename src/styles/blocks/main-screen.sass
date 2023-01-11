@@ -80,6 +80,7 @@
     position: relative
     z-index: 2
     @include fullImg
+    animation: rotate 400s linear
 
   &__planet-bg
     position: absolute
@@ -93,6 +94,12 @@
     background-repeat: no-repeat
     background-position: center
 
+@keyframes rotate
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)
+
 @media screen and (max-width: 768px)
   .main-screen
     &__wrap
@@ -102,6 +109,9 @@
       width: 70%
       bottom: -8%
 
+    &__planet-img
+      animation: none
+
 @media screen and (max-width: 560px)
   .main-screen
     &__wrap
@@ -109,10 +119,13 @@
 
     &__title
       text-align: center
+
     &__text
       text-align: center
+
     &__actions
       justify-content: center
+
     &__planet
       width: 90%
       left: 50%
