@@ -1,0 +1,18 @@
+.footer {
+  padding: 24px 0;
+  background-color: #0b0b0b;
+}
+
+.footer__wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__logo {
+  width: 152px;
+}
+
+.footer__logo-img {
+  display: block;
+  width: 100%;
+}

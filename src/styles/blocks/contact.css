@@ -1,0 +1,59 @@
+.contact {
+  position: relative;
+  padding: 72px 0 112px;
+}
+
+.contact__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.contact__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background-color: #5101a6;
+  background-image: url(../../img/footer-bg.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact__content {
+  position: relative;
+  z-index: 3;
+}
+
+.contact__title {
+  margin-bottom: 32px;
+  font-family: 'Montserrat';
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+}
+
+.contact__text {
+  margin: 0 auto 48px;
+  max-width: 550px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 560px) {
+  .contact {
+    position: relative;
+    padding: 72px 0;
+  }
+}

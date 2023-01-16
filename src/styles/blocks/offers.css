@@ -1,0 +1,25 @@
+.offers {
+  padding-top: 168px;
+  padding-bottom: 98px;
+}
+
+.offers__title {
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 48px;
+  margin-bottom: 62px;
+  text-align: center;
+  color: #5101a6;
+}
+
+@media screen and (max-width: 560px) {
+  .offers {
+    padding-top: 140px;
+    padding-bottom: 72px;
+  }
+
+  .offers__title {
+    margin-bottom: 32px;
+  }
+}

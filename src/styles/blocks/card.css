@@ -1,0 +1,49 @@
+.card {
+  width: calc(25% - 64px);
+  min-width: calc(25% - 64px);
+  margin-right: 64px;
+}
+
+.card__image {
+  margin-bottom: 24px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card__img {
+  display: block;
+  width: 100%;
+}
+
+.card__title {
+  margin-bottom: 8px;
+  font-family: 'Montserrat';
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #5101a6;
+  letter-spacing: 0.01em;
+}
+
+.card__text {
+  font-size: 13px;
+  line-height: 20px;
+  color: #000;
+}
+
+@media screen and (max-width: 991px) {
+  .card {
+    width: calc(50% - 32px);
+    min-width: calc(50% - 32px);
+    margin-right: 32px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .card {
+    width: 100%;
+    min-width: 100%;
+    margin-right: 0;
+  }
+}

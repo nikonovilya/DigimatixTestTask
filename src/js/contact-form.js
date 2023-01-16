@@ -56,21 +56,26 @@ function formValidation(form) {
 }
 function checkValidationFormOnSubmit() {
   const form = document.querySelector('.contact-form');
-  const onSubmitHandler = (event) => {
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
 
     if (formValidation(form)) {
       const name = form.querySelector('input[data-name-input]');
       const tel = form.querySelector('input[data-tel-input]');
       const email = form.querySelector('input[data-email-input]');
+
       const formData = {
         name: name.value,
         phone: tel.value,
         email: email.value,
       };
 
+      name.value = '';
+      tel.value = '';
+      email.value = '';
+
       console.log('formData: ', JSON.stringify(formData, null, 2));
-      alert('Данные формы валидна! (вывел в консоль)');
+      alert('Данные формы валидны! (вывел в консоль)');
     }
   };
 

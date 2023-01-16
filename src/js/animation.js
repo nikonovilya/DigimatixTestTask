@@ -80,7 +80,6 @@ function addOffersAnimation() {
   const offersBlock = document.querySelector('.offers');
   const title = offersBlock.querySelector('.offers__title');
   const tabsNav = offersBlock.querySelector('.tabs__nav');
-  // const tabsContentNav = offersBlock.querySelector('.tabs__content-nav');
   const tabsContent = offersBlock.querySelector('.tabs__content');
   const tabsPagination = offersBlock.querySelector('.tabs__content-pagination');
 

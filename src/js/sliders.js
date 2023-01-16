@@ -17,11 +17,11 @@ function createSliders(className) {
     spaceBetween: 0,
 
     breakpoints: {
-      560: {
+      561: {
         slidesPerView: 2,
         spaceBetween: 32,
       },
-      991: {
+      992: {
         slidesPerView: 4,
         spaceBetween: 64,
       },

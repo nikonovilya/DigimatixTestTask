@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const PostcssPresetEnv = require('postcss-preset-env');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const target = isDev ? 'web' : 'browserslist';
@@ -42,7 +43,7 @@ module.exports = {
         loader: 'html-loader',
       },
       {
-        test: /\.(sass|css|scss)$/,
+        test: /\.css$/i,
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
@@ -54,7 +55,6 @@ module.exports = {
               },
             },
           },
-          'sass-loader',
         ],
       },
       {
@@ -87,5 +87,10 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+    ],
   },
 };
