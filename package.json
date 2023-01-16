@@ -10,7 +10,10 @@
     "build": "cross-env NODE_ENV=production webpack",
     "start": "cross-env NODE_ENV=development webpack-dev-server"
   },
-  "browserslist": "last 2 versions, > 0.5%, not dead",
+  "browserslist": [
+    "last 2 versions",
+    "ie 10"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
